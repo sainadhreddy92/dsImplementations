@@ -15,7 +15,7 @@ class solution(object):
         rootNode.map[word[i]]= newnode
         if i==len(word)-1:
           rootNode.isCompleteword = True
-        rootNode = newnode
+        rootnode = newnode
 
   def findword(self,rootNode,prefix):
     for i in range(len(prefix)):
@@ -42,7 +42,7 @@ class solution(object):
       
 
   def helper(self,rootNode,prefix,res):
-    if not rootNode:
+    if  len(rootNode.map)==0:
       return res
     for letter in rootNode.map:
       if rootNode.isCompleteword==True:
@@ -61,7 +61,7 @@ class solution(object):
 
 
 def main():
-  li = ["hack","hackerrank","abc","abcd","abcde","abcdef","abcdefg"]
+  li = ["hack","hackerrank","abc","abcf","abce","abcd","abcde","abcdef","abcdefg"]
   rootNode = trienode()
   sol = solution()
   for element in li:

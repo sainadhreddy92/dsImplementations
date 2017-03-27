@@ -1,0 +1,16 @@
+class Solution(object):
+  def wigglesort(self,array):
+    if not array:
+      return array
+    for i in range(len(array)-1):
+      if (i%2==0 and array[i]>array[i+1]) or (i%2==1 and array[i]<array[i+1]):
+        array[i],array[i+1]=array[i+1],array[i]
+    return array
+
+
+def main():
+  sol = Solution()
+  print sol.wigglesort([3, 5, 2, 1, 6, 4])
+
+if __name__=='__main__':
+  main()
